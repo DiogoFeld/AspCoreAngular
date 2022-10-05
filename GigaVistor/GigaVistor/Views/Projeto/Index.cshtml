@@ -1,0 +1,35 @@
+﻿@model IEnumerable<GigaVistor.Models.ProjetoModel>
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h1>Index</h1>
+
+
+<p>
+    <b>
+        <a class="btn buttonFooterElement" asp-action="CreatePage">Criar Novo Projeto</a>
+    </b>
+</p>
+
+
+
+<div class="mainDivContent">
+
+    @foreach (var item in Model)
+    {
+        <div class="mainElementSelection">
+            <h3>
+                @item.Name
+            </h3>
+
+            <div class="mainElementFooter">
+                <p>Status: @item.status</p>
+                <a asp-action="Details" asp-route-id="@item.Id" class="btn buttonFooterElement">
+                    Selecionar
+                </a>
+            </div>
+        </div>
+    }
+</div>
