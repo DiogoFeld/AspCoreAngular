@@ -1,2 +1,0 @@
-# AspCoreAngular
-Beggining with AspCore
